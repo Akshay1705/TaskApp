@@ -57,6 +57,6 @@ class TaskController extends Controller
         $task = Task::findOrFail($id);// Find the task by its ID or fail if not found
         $task->delete();// Delete the task
 
-        return redirect('/tasks')->with('success', 'Task deleted successfully.');// Redirect to the tasks index with a success message
+        return redirect('/tasks')->with('danger', 'Task deleted successfully.');// Redirect to the tasks index with a success message
     }
 }
